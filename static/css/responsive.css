@@ -1,0 +1,36 @@
+.affiliations-table{max-width:750px;width:100%;margin:0 auto;border-collapse:collapse}
+.affiliation{padding:0 0.5rem;text-align:center;vertical-align:middle}
+.affiliation-text{font-size:22px;display:block;word-wrap:break-word;hyphens:auto}
+@media (max-width:600px){
+  .affiliation-text{font-size:16px}
+  .affiliations-table td{padding:0 0.25rem}
+}
+
+/* Mobile content padding and responsive images */
+/* Add horizontal padding so paragraphs don't touch screen edges on phones */
+@media (max-width:768px){
+  .container,
+  .container.is-max-desktop {
+    padding-left:1rem;
+    padding-right:1rem;
+    box-sizing:border-box;
+  }
+
+  .content,
+  .content.has-text-justified {
+    padding-left:0.25rem;
+    padding-right:0.25rem;
+  }
+
+  .content p{margin-left:0;margin-right:0}
+
+  /* Make images scale down and avoid overflowing */
+  .content img,
+  img {
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}

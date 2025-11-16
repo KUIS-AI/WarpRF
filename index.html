@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/responsive.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -63,9 +64,9 @@ window.MathJax = {
       <div class="columns is-centered">
         <div class="column has-text-centered">
 			<h1 class="title is-1 publication-title" style="margin-bottom: 0">WarpRF: Multi-View Consistency for Training-Free Uncertainty Quantification</h1><h1 class="title is-1 publication-title" style="margin-bottom: 0">and Applications in Radiance Fields</h1>
-          <!-- <div class="is-size-4 publication-authors">
-                <span class="univerity-block" style="color: rgb(54, 54, 54); font-size: 2.5rem">BMVC 2024</span>
-          </div> -->
+          <div class="is-size-4 publication-authors">
+                <span class="univerity-block" style="color: rgb(54, 54, 54); font-size: 2.5rem">WACV 2026</span>
+          </div>
 		  <br>
 
           <div class="is-size-4 publication-authors">
@@ -80,21 +81,16 @@ window.MathJax = {
           </div>
 
 		  <br>
-		  <table align=center width=750px>
-				<table align=center width=750px>
-					<tr>
-						<td align=center width=200px>
-							<center>
-								<span style="font-size:22px">KUIS AI Center, Koç University<sup>1</sup></span>
-							</center>
-						</td>
-						<td align=center width=200px>
-							<center>
-								<span style="font-size:22px">University of Bologna<sup>2</sup></span>
-							</center>
-						</td>
-					</tr>
-				</table>
+        <table class="affiliations-table" role="presentation">
+          <tr>
+            <td class="affiliation">
+              <span class="affiliation-text">KUIS AI Center, Koç University<sup>1</sup></span>
+            </td>
+            <td class="affiliation">
+              <span class="affiliation-text">University of Bologna<sup>2</sup></span>
+            </td>
+          </tr>
+        </table>
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -170,6 +166,409 @@ window.MathJax = {
 
 <hr>
 
+<div class="container ">
+      <div class=" has-text-centered">
+        <h2 class="title is-3">Active Mapping Results</h2>
+        <div class="content has-text-justified">
+          <p>
+
+          </p>
+        </div>
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content">
+              <div class="columns is-centered">
+                <div class="column is-full-width">
+                  <div id="example1" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/qual_resized/Truck_color_our.png">
+                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                        WarpRF
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width:96.4968152866242%;">
+                      <div class="bal-before-inset" style="width: 539px;">
+                        <img src="./static/images/qual_resized/Truck_color_fisher.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          FisherRF
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left:96.4968152866242%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+
+
+                  <div id="example2" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/qual_resized/Barn_color_our.png">
+                      <div class="bal-afterPosition afterLabel">
+                        WarpRF
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width: 50%;">
+                      <div class="bal-before-inset" style="width: 539px;">
+                        <img src="./static/images/qual_resized/Barn_color_fisher.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          FisherRF
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left: 50%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+				  <div id="example3" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/qual_resized/Meetingroom_color_our2.png">
+                      <div class="bal-afterPosition afterLabel">
+                        WarpRF
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width: 50%;">
+                      <div class="bal-before-inset" style="width: 539px;">
+                        <img src="./static/images/qual_resized/Meetingroom_color_fisher2.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          FisherRF
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left: 50%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+				  <div id="example4" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/qual_resized/Ignatius_color_our.png">
+                      <div class="bal-afterPosition afterLabel">
+                        WarpRF
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width: 50%;">
+                      <div class="bal-before-inset" style="width: 539px;">
+                        <img src="./static/images/qual_resized/Ignatius_color_fisher.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          FisherRF
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left: 50%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+                </div>
+				
+              </div>
+            </div>
+          </div>
+
+
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+
+                <div id="example5" class="bal-container-small">
+                  <div class="bal-after">
+                    <img src="./static/images/qual_resized/Truck_mesh_our.png">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      WarpRF
+                    </div>
+                  </div>
+
+                  <div class="bal-before" style="width:62.10191082802548%;">
+                    <div class="bal-before-inset" style="width: 539px;">
+                      <img src="./static/images/qual_resized/Truck_mesh_fisher.png">
+                      <div class="bal-beforePosition beforeLabel">
+                        FisherRF
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-handle" style="left:62.10191082802548%;">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+
+                <div id="example6" class="bal-container-small">
+                  <div class="bal-after">
+                    <img src="./static/images/qual_resized/Barn_mesh_our.png">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      WarpRF
+                    </div>
+                  </div>
+
+                  <div class="bal-before" style="width:56.77179962894249%;">
+                    <div class="bal-before-inset" style="width: 539px;">
+                      <img src="./static/images/qual_resized/Barn_mesh_fisher.png">
+                      <div class="bal-beforePosition beforeLabel">
+                        FisherRF
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-handle" style="left:56.77179962894249%;">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+				<div id="example7" class="bal-container-small">
+					<div class="bal-after">
+					  <img src="./static/images/qual_resized/Meetingroom_mesh_our2.png">
+					  <div class="bal-afterPosition afterLabel" style="z-index:1;">
+						WarpRF
+					  </div>
+					</div>
+  
+					<div class="bal-before" style="width:56.77179962894249%;">
+					  <div class="bal-before-inset" style="width: 539px;">
+						<img src="./static/images/qual_resized/Meetingroom_mesh_fisher2.png">
+						<div class="bal-beforePosition beforeLabel">
+						  FisherRF
+						</div>
+					  </div>
+					</div>
+  
+					<div class="bal-handle" style="left:56.77179962894249%;">
+					  <span class=" handle-left-arrow"></span>
+					  <span class="handle-right-arrow"></span>
+					</div>
+  
+				  </div>
+				  <div id="example8" class="bal-container-small">
+					<div class="bal-after">
+					  <img src="./static/images/qual_resized/Ignatius_mesh_our.png">
+					  <div class="bal-afterPosition afterLabel" style="z-index:1;">
+						WarpRF
+					  </div>
+					</div>
+  
+					<div class="bal-before" style="width:56.77179962894249%;">
+					  <div class="bal-before-inset" style="width: 539px;">
+						<img src="./static/images/qual_resized/Ignatius_mesh_fisher.png">
+						<div class="bal-beforePosition beforeLabel">
+						  FisherRF
+						</div>
+					  </div>
+					</div>
+  
+					<div class="bal-handle" style="left:56.77179962894249%;">
+					  <span class=" handle-left-arrow"></span>
+					  <span class="handle-right-arrow"></span>
+					</div>
+  
+				  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script>
+    new BeforeAfter({
+      id: '#example1'
+    });
+    new BeforeAfter({
+      id: '#example2'
+    });
+	new BeforeAfter({
+      id: '#example3'
+    });
+    new BeforeAfter({
+      id: '#example4'
+    });
+    new BeforeAfter({
+      id: '#example5'
+    });
+	new BeforeAfter({
+      id: '#example6'
+    });
+	new BeforeAfter({
+      id: '#example7'
+    });
+	new BeforeAfter({
+      id: '#example8'
+    });
+
+  </script>
+
+<hr>
+
+<div class="container ">
+      <div class=" has-text-centered">
+        <h2 class="title is-3">Active View Selection Results</h2>
+        <div class="content has-text-justified">
+          <p>
+
+          </p>
+        </div>
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content">
+              <div class="columns is-centered">
+                <div class="column is-full-width">
+                  <div id="example11" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/qual_resized/bonsai_00031_ours.jpg">
+                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                        WarpRF
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width:96.4968152866242%;">
+                      <div class="bal-before-inset" style="width: 539px;">
+                        <img src="./static/images/qual_resized/bonsai_00031_fisherRF.jpg">
+                        <div class="bal-beforePosition beforeLabel">
+                          FisherRF
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left:96.4968152866242%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+
+
+                  <div id="example12" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/qual_resized/counter_00009_ours.jpg">
+                      <div class="bal-afterPosition afterLabel">
+                        WarpRF
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width: 50%;">
+                      <div class="bal-before-inset" style="width: 539px;">
+                        <img src="./static/images/qual_resized/counter_00009_fisherRF.jpg">
+                        <div class="bal-beforePosition beforeLabel">
+                          FisherRF
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left: 50%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+				  
+				  
+                </div>
+				
+              </div>
+            </div>
+          </div>
+
+
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+
+                <div id="example15" class="bal-container-small">
+                  <div class="bal-after">
+                    <img src="./static/images/qual_resized/garden_00022_ours.jpg">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      WarpRF
+                    </div>
+                  </div>
+
+                  <div class="bal-before" style="width:62.10191082802548%;">
+                    <div class="bal-before-inset" style="width: 539px;">
+                      <img src="./static/images/qual_resized/garden_00022_fisherRF.jpg">
+                      <div class="bal-beforePosition beforeLabel">
+                        FisherRF
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-handle" style="left:62.10191082802548%;">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+
+                <div id="example16" class="bal-container-small">
+                  <div class="bal-after">
+                    <img src="./static/images/qual_resized/room_00021_ours.jpg">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      WarpRF
+                    </div>
+                  </div>
+
+                  <div class="bal-before" style="width:56.77179962894249%;">
+                    <div class="bal-before-inset" style="width: 539px;">
+                      <img src="./static/images/qual_resized/room_00021_fisherRF.jpg">
+                      <div class="bal-beforePosition beforeLabel">
+                        FisherRF
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-handle" style="left:56.77179962894249%;">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+				
+				  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script>
+    new BeforeAfter({
+      id: '#example11'
+    });
+    new BeforeAfter({
+      id: '#example12'
+    });
+	
+    new BeforeAfter({
+      id: '#example15'
+    });
+	new BeforeAfter({
+      id: '#example16'
+    });
+
+
+  </script>
+
+
 
   
 <section class="section" id="BibTeX">
@@ -177,7 +576,7 @@ window.MathJax = {
     <!-- <div class=" has-text-centered"> -->
       <h2 class="title is-3">BibTeX</h2>
     <!-- </div> -->
-    <pre><code>@article{safadoust20WarpRF,
+    <pre><code>@article{safadoustWarpRF,
       title={WarpRF: Multi-View Consistency for Training-Free Uncertainty Quantification and Applications in Radiance Fields},
       author={Safadoust, Sadra and Tosi, Fabio and G{\"u}ney, Fatma and Poggi, Matteo},
       booktitle={arXiv preprint arXiv:2506.22433},

@@ -77,3 +77,58 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
 })
+
+// Resize each .bal-container-small to match the aspect ratio of its contained image.
+// This keeps the before/after widget responsive: the container height is set to
+// containerWidth / (naturalWidth / naturalHeight).
+;(function() {
+  function setContainerHeightFromImage($container) {
+    var img = $container.find('.bal-after img, .bal-before img').first()[0];
+    if (!img) return;
+
+    function apply() {
+      if (!img.naturalWidth || !img.naturalHeight) return;
+      var aspect = img.naturalWidth / img.naturalHeight;
+      var width = $container.width();
+      var newHeight = Math.round(width / aspect);
+      // optional caps to avoid extremely tall widgets on narrow phones
+      var maxHeight = Math.round(window.innerHeight * 0.75);
+      if (newHeight > maxHeight) newHeight = maxHeight;
+      $container.css('height', newHeight + 'px');
+    }
+
+    if (img.complete) {
+      apply();
+    } else {
+      // wait for image to load
+      $(img).on('load', apply);
+    }
+  }
+
+  function adjustAllBalContainers() {
+    $('.bal-container-small').each(function() {
+      setContainerHeightFromImage($(this));
+    });
+  }
+
+  // Debounce helper
+  function debounce(fn, wait) {
+    var t = null;
+    return function() {
+      var args = arguments;
+      clearTimeout(t);
+      t = setTimeout(function() { fn.apply(null, args); }, wait);
+    };
+  }
+
+  // Run after DOM ready (covers images already present) and after a short delay
+  $(function() { adjustAllBalContainers(); });
+
+  // Recompute on window resize
+  $(window).on('resize', debounce(adjustAllBalContainers, 120));
+
+  // Also re-run when orientation changes on mobile
+  window.addEventListener('orientationchange', function() {
+    setTimeout(adjustAllBalContainers, 200);
+  });
+})();
