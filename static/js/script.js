@@ -6,12 +6,14 @@ class BeforeAfter {
         const beforeText = beforeAfterContainer.querySelector('.bal-beforePosition');
         const afterText = beforeAfterContainer.querySelector('.bal-afterPosition');
         const handle = beforeAfterContainer.querySelector('.bal-handle');
-        var widthChange = 0;
 
-        beforeAfterContainer.querySelector('.bal-before-inset').setAttribute("style", "width: " + beforeAfterContainer.offsetWidth + "px;")
-        window.onresize = function () {
-            beforeAfterContainer.querySelector('.bal-before-inset').setAttribute("style", "width: " + beforeAfterContainer.offsetWidth + "px;")
-        }
+        const beforeInset = beforeAfterContainer.querySelector('.bal-before-inset');
+        const applyInsetWidth = () => {
+            beforeInset.setAttribute("style", "width: " + beforeAfterContainer.offsetWidth + "px;")
+        };
+
+        applyInsetWidth();
+        window.addEventListener('resize', applyInsetWidth);
         before.setAttribute('style', "width: 50%;");
         handle.setAttribute('style', "left: 50%;");
 
@@ -39,8 +41,7 @@ class BeforeAfter {
         //mouse move event listener
         beforeAfterContainer.addEventListener('mousemove', (e) => {
             let containerWidth = beforeAfterContainer.offsetWidth;
-            widthChange = e.offsetX;
-            let newWidth = widthChange * 100 / containerWidth;
+            let newWidth = e.offsetX * 100 / containerWidth;
 
             if (e.offsetX > 10 && e.offsetX < beforeAfterContainer.offsetWidth - 10) {
                 before.setAttribute('style', "width:" + newWidth + "%;");
